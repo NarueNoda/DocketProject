@@ -1,0 +1,37 @@
+	<nav class="navbar bg-dark navbar-dark" id="nav-top" th:fragment="navbar">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-collapse" aria-controls="nav-collapse" aria-expanded="false" aria-label="Menu">
+	      <span class="fas fa-th"></span>
+	    </button>
+		<a class="navbar-brand" href="#">Docket</a>
+	</nav>
+	
+	<!-- nav em sm -->
+	<div class="pl-0 d-md-none collapse nav-color" id="nav-collapse"  th:fragment="nav-sm">
+		
+		  <ul class="nav flex-column">
+		    <li class="nav-item">
+		      <a class="nav-link" th:href="@{/}">Home</a>
+		    </li>
+		    <li class="nav-item">
+		    	<a class="nav-link" th:href="@{/cartorios/showForm}"><i class="fas fa-plus-circle pr-2"></i>Novo Cartório</a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link" th:href="@{/cartorios/list}"><i class="fas fa-bars pr-2"></i>Cartórios</a>
+		    </li>
+		  </ul>
+	</div>
+	
+	<div class="pl-0 d-none d-md-block nav-color" id="nav-left"  th:fragment="nav-left">
+		
+		  <ul class="nav flex-column">
+		    <li class="nav-item">
+		      <a class="nav-link" th:href="@{/}">Home</a>
+		    </li>
+		    <li class="nav-item">
+		    	<a class="nav-link" th:href="@{/cartorios/showForm}"><i class="fas fa-plus-circle pr-2"></i>Novo Cartório</a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link"  th:href="@{/cartorios/list}"><i class="fas fa-bars pr-2"></i>Cartórios</a>
+		    </li>
+		  </ul>
+	</div>

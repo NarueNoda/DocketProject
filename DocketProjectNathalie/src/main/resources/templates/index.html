@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
+
+<head th:replace="~{fragments/head :: head}"></head>
+
+<nav th:replace="~{fragments/nav :: navbar}"></nav>
+<div th:replace="~{fragments/nav :: nav-sm}"></div>
+<div th:replace="~{fragments/nav :: nav-left}"></div>
+
+<body>
+	
+	<div class="content">
+	
+		<div th:replace="~{fragments/content :: path('Docket')}"></div>
+		
+		<div class="main-content">
+		
+	              
+         </div>
+         
+    <div th:replace="~{fragments/scripts :: scripts}"></div>
+</body>
+
+</html>

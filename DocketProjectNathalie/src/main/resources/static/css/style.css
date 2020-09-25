@@ -1,0 +1,98 @@
+@charset "ISO-8859-1";
+
+.back-color{
+	color: #545789;
+}
+
+body{
+	background-color: #f3f3f3;
+}
+
+#nav-top{
+	z-index: 2;
+}
+
+#nav-top i{
+	color:  #f3f3f3;
+}
+
+#nav-left{
+  height: 100%; /* 100% Full-height */
+  width: 300px; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0px ;
+  left: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  overflow-y: auto;
+  padding-top: 80px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+.nav-color{
+  background-color: #545789;
+}
+
+.nav-color ul li a{
+	color: #f3f3f3;
+	padding-left:26px;
+}
+
+.nav-color ul li a:hover{
+	color: #eaeae9;
+	background-color: #424571;
+	border-left: 6px solid #ffaf3e;
+	padding-left:20px;
+}
+
+
+
+
+
+
+
+
+.content{
+	margin-left: 300px;
+}
+
+.path{
+	background-color:white;
+	padding: 20px 10px 10px 50px ;
+}
+
+.main-content{
+	margin-top: 40px;
+	padding-left:50px;
+	padding-right: 50px;
+}
+
+.cardheader-p{
+	padding: 10px 10px 5px 20px;
+	background-color: #eaeae9;
+}
+
+.cardbody-p{
+	padding: 30px 10px 30px 20px;
+	background-color: white;
+	margin-top: 20px;
+}
+
+.cardbody-p .fa-edit{
+	color: #ffaf3e;
+}
+
+.cardbody-p .fa-trash-alt{
+	color: #e65562;
+}
+
+@media (max-width: 768px) {
+	.content{
+		margin-left: 0px;
+	}
+	.main-content{
+		padding-left:10px;
+		padding-right: 10px;
+	}
+}
+

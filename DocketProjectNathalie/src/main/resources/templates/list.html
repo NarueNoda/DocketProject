@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
+
+<head th:replace="~{fragments/head :: head}"></head>
+
+<nav th:replace="~{fragments/nav :: navbar}"></nav>
+<div th:replace="~{fragments/nav :: nav-sm}"></div>
+<div th:replace="~{fragments/nav :: nav-left}"></div>
+
+<body>
+	
+	<div class="content">
+	
+		<div th:replace="~{fragments/content :: path('Docket / Cartórios')}"></div>
+		
+		<div class="main-content">
+		
+	               <div th:switch="${cartorios}">
+	               
+	               <h2>Cartórios</h2>
+                   <div class="my-4">
+                       <h2 th:case="null" class="back-color">Sem cartórios cadastrados</h2>
+                       <div th:case="*">
+                       		
+                       		<div class="card cardheader-p">
+	                       		<div class="row">
+	                       			<div class="col-lg-3 col-md-4 col-3">
+	                       				<h6>Nome</h6>
+	                       			</div>
+	                       			<div class="col-lg-3 col-md-4 col-3">
+	                       				<h6>Endereço</h6>
+	                       			</div>
+	                       			<div class="col-lg-2 col-md-4 col-2">
+	                       				<h6>Certidão</h6>
+	                       			</div>
+	                       			<div class="col-lg-2 col-md-2 col-2">
+	                       				<h6>Editar</h6>
+	                       			</div>
+	                       			<div class="col-lg-2 col-md-2 col-2">
+	                       				<h6>Excluir</h6>
+	                       			</div>
+                       			</div>
+                       		</div>
+                       		
+                       		<div class="card cardbody-p" th:each="cartorio : ${cartorios}">
+	                       		<div class="row">
+	                       			<div class="col-xl-3 col-lg-4 col-md-4 col-4">
+	                       				<h6 th:text="${cartorio.nome}"></h6>
+	                       			</div>
+	                       			<div class="col-xl-3 col-lg-4 col-md-4 col-4">
+	                       				<h6 th:text="${cartorio.endereco}"></h6>
+	                       			</div>
+	                       			<div class="col-xl-2" >
+	                       				<span th:each="certidao : ${certidoes}"
+	                       				th:if="${certidao.cartorio.id == cartorio.id}">
+	                       					<p th:text="${certidao.nome}" class="mb-0"></p>
+	                       				</span>
+	                       			</div>
+	                       			<div class="col-xl-2 col-lg-2 col-md-2 col-2">
+	                       				<a th:href="@{/cartorios/edit/{id}(id=${cartorio.id})}" ><i class="fas fa-edit"></i></a>
+	                       			</div>
+	                       			<div class="col-xl-2 col-lg-2 col-md-2 col-2">
+	                       				<a th:href="@{/cartorios/delete/{id}(id=${cartorio.id})}"><i class="fas fa-trash-alt"></i></a>
+	                       			</div>
+                       			</div>
+                       		</div>
+                       </div>
+					</div>
+                 </div>
+               </div>
+         </div>
+         
+    <div th:replace="~{fragments/scripts :: scripts}"></div>
+</body>
+
+</html>

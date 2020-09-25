@@ -3,7 +3,7 @@ Projeto feito para o teste da Docket
 
 Foi realizado o desenho de diagrama de Peter Chen, com a entidade "CARTORIO" e os atributos "ID", "NOME", "ENDERECO" e "CERTIDAO" como atributo multivalorado, virando uma tabela.
 
-Foi utilizado o IDE Eclipse 4.17.0 e as dependêcias selecionadas foram Spring Boot DevTools 4, Spring Data JPA, H2 Database, Thymeleaf e Spring Web.
+Foi utilizado o IDE Eclipse 4.17.0, com a linguagem de programação Java 11 e as dependêcias selecionadas foram Spring Boot DevTools 4, Spring Data JPA, H2 Database, Thymeleaf e Spring Web.
 
 E como banco de dados retetívo utilizei o PostgreSQL 11.
 
